@@ -5,6 +5,11 @@ RSpec.feature "Users can create new projects" do
         visit "/"
 
         click_link "New Project"
-        fill_in "Name", with: "Sublimne text 3"
+        fill_in "Name", with: "Sublime text 3"
+        fill_in "Description", with: "A Text Editor for everyone"
+
+        click_button "Create Project"
+
+        expect(page).to have_content "Project has been created."
     end
 end
