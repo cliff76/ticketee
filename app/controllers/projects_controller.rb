@@ -6,5 +6,18 @@ class ProjectsController < ApplicationController
     end
 
     def create
+        @project = Project.new(project_params)
+        if @project.save
+            flash[:notice] = "Project has been created."
+            redirect_to @project
+        end
+    end
+
+    def project_params
+        params.require(:project).permit(:name, :description)
+    end
+
+    def show
+        @project = Project.find(params[:id])
     end
 end
