@@ -44,3 +44,5 @@ gem "rspec-rails", "~> 3.9", group: [:development, :test]
 gem "capybara", "~> 2.18", group: [:development, :test]
 
 gem "graphql", "~> 1.10"
+
+gem "graphiql-rails", group: :development
