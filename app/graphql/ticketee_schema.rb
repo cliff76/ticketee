@@ -1,7 +1,7 @@
 require 'queries/root'
 require 'mutations/root'
 class TicketeeSchema < GraphQL::Schema
-  mutation(Types::MutationType)
+  mutation(Mutations::RootMutation)
   query(Queries::RootQuery)
 
   # Opt in to the new runtime (default in future graphql-ruby versions)
